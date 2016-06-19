@@ -1,0 +1,10 @@
+name: crystal-snowball
+version: 0.1.0
+
+authors:
+  - Mathieu Laporte <mlaporte@azendoo.com>
+
+license: MIT
+
+scripts:
+  postinstall: cd ext/libstemmer_c && make
