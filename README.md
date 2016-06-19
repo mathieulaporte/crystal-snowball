@@ -1,6 +1,7 @@
 # crystal-snowball
 
-TODO: Write a description here
+Snowball is a small string processing language designed for creating stemming algorithms for use in Information Retrieval.
+This is a crystal binding for the C API provided by [snowball](http://snowballstem.org/).
 
 ## Installation
 
@@ -10,7 +11,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   crystal-snowball:
-    github: [your-github-name]/crystal-snowball
+    github: mathieulaporte/crystal-snowball
 ```
 
 
@@ -19,14 +20,11 @@ dependencies:
 
 ```crystal
 require "crystal-snowball"
+
+puts Crystal::Snowball::Stemmer.new("en", "UTF_8").stem("installation")
+# instal
 ```
 
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
@@ -38,4 +36,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Mathieu Laporte - creator, maintainer
+- [mathieulaporte](https://github.com/mathieulaporte) Mathieu Laporte - creator, maintainer
