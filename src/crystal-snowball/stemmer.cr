@@ -8,7 +8,7 @@ module Crystal::Snowball
     def stem(words)
       words.split(" ").map do |word|
         stemmer = Crystal::Snowball::Lib.init(@language, @encoding)
-        string = String.new(Crystal::Snowball::Lib.stem(stemmer, word))
+        string = String.new(Crystal::Snowball::Lib.stem(stemmer, word, word.size))
         Crystal::Snowball::Lib.del(stemmer)
         string
       end.join(" ")
