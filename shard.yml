@@ -7,4 +7,4 @@ authors:
 license: MIT
 
 scripts:
-  postinstall: cd ext/libstemmer_c && make
+  postinstall: cd src/ext/libstemmer_c && make
